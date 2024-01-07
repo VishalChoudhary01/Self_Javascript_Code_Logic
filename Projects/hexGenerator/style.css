@@ -1,0 +1,31 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Lora:wght@500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;500;700;900&display=swap');
+
+.control_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.control_box h1 {
+  text-align: center;
+  margin: 100px;
+}
+.controls {
+  display: flex;
+  justify-content: space-around;
+  min-width: 400px;
+}
+.controls button {
+  width: 180px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 4px 3px ;
+  background: #c6ebe5;
+  font-weight: 600;
+}

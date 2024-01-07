@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Background Changer !! Automatically</title>
+  </head>
+  <body>
+    <div class="control_box">
+      <h1>Click Start Button to Change Background Color (Automatically)</h1>
+      <div class="controls">
+        <button id="startBut">START</button>
+        <button id="stopBut">STOP</button>
+      </div>
+    </div>
+    <script>
+      const startBut = document.querySelector("#startBut");
+      const stopBut = document.querySelector("#stopBut");
+      const body = document.body;
+      let changer;
+      const randomhexColor = function () {
+        const hexCodeNum = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 1; i <= 6; i++) {
+          color = color + hexCodeNum[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      };
+      // body.style.backgroundColor=randomhexColor();
+
+      startBut.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        changer = setInterval(() => {
+          body.style.backgroundColor = randomhexColor();
+        }, 1000);
+      });
+
+      //   clearInterval(changer)
+
+      stopBut.addEventListener("click", () => {
+        clearInterval(changer);
+      });
+    </script>
+  </body>
+</html>
