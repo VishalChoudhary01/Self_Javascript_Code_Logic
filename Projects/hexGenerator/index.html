@@ -8,7 +8,9 @@
   </head>
   <body>
     <div class="control_box">
-      <h1>Click Start Button to Change Background Color (Automatically)</h1>
+      <section>
+        <h1>Click Start Button to Change Background Color (Automatically)</h1>
+      </section>
       <div class="controls">
         <button id="startBut">START</button>
         <button id="stopBut">STOP</button>
@@ -29,11 +31,12 @@
       };
       // body.style.backgroundColor=randomhexColor();
 
-      startBut.addEventListener("click", (event) => {
-        event.preventDefault();
+      startBut.addEventListener("click", () => {
 
-        changer = setInterval(() => {
-          body.style.backgroundColor = randomhexColor();
+        changer = setInterval((changer) => {
+          if (changer !== null) {
+            body.style.backgroundColor = randomhexColor();
+          }
         }, 1000);
       });
 
@@ -41,6 +44,7 @@
 
       stopBut.addEventListener("click", () => {
         clearInterval(changer);
+        changer = null;
       });
     </script>
   </body>

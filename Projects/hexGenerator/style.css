@@ -1,16 +1,32 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Lora:wght@500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;500;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
-.control_box {
+body{
+  transition: background 1.8s;
+}
+  .control_box {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
+  
 }
-.control_box h1 {
+.control_box section{
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+  margin: 10px;
+  backdrop-filter: blur(15px);
+  box-shadow: 1px 1px 1px #fff,1px -1px 1px  #131212 ;
+}
+.control_box section h1 {
   text-align: center;
-  margin: 100px;
+  margin: 80px 10px 80px 10px;
+  font-family: 'Lemon', serif;
+  text-shadow: 1px 1px 8px #fff;
+  font-size: 1.6rem;
+  word-spacing: 5px;
 }
 .controls {
   display: flex;
@@ -23,9 +39,15 @@
   outline: none;
   border: none;
   border-radius: 20px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-family: 'Poppins', sans-serif;
   box-shadow: 4px 3px ;
   background: #c6ebe5;
   font-weight: 600;
+  transition: all 0.3s;
+}
+
+.controls button:active,.controls button:hover{
+  background-color: rgb(26, 25, 25);
+  color: #fff;
 }
