@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise Resolve</title>
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    "
+  >
+    <input type="button" value="Click Me" class="mybtn" />
+    <script>
+      const buttonClick = document.querySelector(".mybtn");
+      const myPromise = new Promise((res, rej) => {
+        buttonClick.addEventListener("click", () => {
+          setTimeout(() => {
+            rej("data got");
+          }, 5000);
+        });
+      });
+      myPromise
+        .then((data) => {
+          console.log("promise resolved", data);
+        })
+        .catch((error) => {
+          console.error("promise rejected", error);
+        });
+    </script>
+  </body>
+</html>

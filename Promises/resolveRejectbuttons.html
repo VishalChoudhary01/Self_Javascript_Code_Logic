@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolve & Reject Promise Buttons</title>
+</head>
+<body style="display: flex;justify-content: center;align-items: center;gap: 15px; min-height: 100vh;">
+    <input type="button" value="Right Answer">
+    <input type="button" value="Wrong Answer">
+
+    <script>
+const buttons=document.getElementsByTagName("input");
+const myPromise=new Promise((resolve,reject)=>{
+    resolve("...Nice")
+
+})
+myPromise.then(buttons[0].addEventListener("click",(e)=>{
+e.target.value="Right !!";
+}))
+    </script>
+</body>
+</html>

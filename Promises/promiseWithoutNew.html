@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Without New</title>
+</head>
+<body>
+    <script>
+        async function myFun(num){
+            if(num===10){
+                //fullfiled
+                return "resolved"
+            }else{
+                //pending
+                return await "Loading...."
+            }
+        }
+        const wait=myFun(10);
+        console.log(wait)
+    </script>
+</body>
+</html>
